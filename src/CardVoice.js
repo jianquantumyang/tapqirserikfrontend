@@ -30,7 +30,7 @@ const ContentWrapper = styled('div')({
 
 
 
-export default function CardVoice({who,text,audio})
+export default function CardVoice({who,text,audio,idx})
 {
 
     const [name, setName] = useState("Сіз");
@@ -71,7 +71,7 @@ export default function CardVoice({who,text,audio})
                 </Link>
             </Typography>
             <div>
-                <AudioPlayer  src={audio} id="inline" inline />
+                <AudioPlayer  src={audio} id={"indline" + idx} inline />
                  
                 
             </div>

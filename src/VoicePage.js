@@ -53,6 +53,7 @@ function VoicePage() {
         })
             .then(res => res.json())
             .then(res => {
+              
                 let aud = SERVER_URL + res.mp3;
                 setChat([...chat, { who: 'ai', audio: aud, text: '' }])
             })
@@ -85,7 +86,7 @@ function VoicePage() {
         }}
       >
         <Welcome />
-        {chat.map((data,inx) => { return (<CardVoice who={data.who} audio={data.audio} text={data.text}  key={inx} />)})}
+        {chat.map((data,inx) => { return (<CardVoice who={data.who} audio={data.audio} text={data.text} idx={inx}  key={inx} />)})}
         <TextField
           variant="outlined"
           value={message}
