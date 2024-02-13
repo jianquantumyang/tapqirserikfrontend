@@ -68,7 +68,11 @@ function CardImage({ who, text, image }) {
             </Typography>
             <div>
                 
-                <img src={image} alt="idk why?" />
+            <img 
+            src={image} 
+            alt="idk why?" 
+            style={{ maxWidth: '100%', height: 'auto' }} // Add this style for responsiveness
+            />
                 
             </div>
             <IconButton component={Link} target="_blank" href={image} download> <DownloadIcon /></IconButton>
